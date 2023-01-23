@@ -4,12 +4,13 @@ LIB 		= 	libasm.a
 
 SRC_DIR		=	src_asm
 
-FILES 		= 	ft_write.s\
-				ft_strlen.s\
-				ft_strcpy.s\
-				ft_strdup.s\
-				ft_strcmp.s\
-				ft_write.s\
+FILES 		= 	ft_write.s
+
+				#ft_strlen.s\
+				#ft_strcpy.s\
+				#ft_strdup.s\
+				#ft_strcmp.s\
+				#ft_write.s\
 
 SRCS 		= 	$(addprefix $(SRC_DIR)/, $(FILES))
 
@@ -39,21 +40,21 @@ $(NAME)		: 	$(OBJ)
 			  	@ar rcs $(LIB) $(OBJ)
 				@echo "\033[0;33mDone!\033[0m"
 
-test 		: 	main.o
-		      	@$(CC) $(CFLAGS) $(CFILES) $(LIB) 
-				@echo "\033[0;33mDone!\033[0m!"
+test 		: 	
+		      	@$(CC) $(CFLAGS) main.c $(LIB)
+				@echo "\033[0;33mDone!\033[0m"
 
 clean		:
 				@rm -f main.o
 		      	@rm -f $(OBJ)
-				@echo "\033[0;33mObject cleaned!\033[0m!"
+				@echo "\033[0;33mObject cleaned!\033[0m"
 
 fclean		:	
 				@rm -f main.o
 		      	@rm -f $(OBJ)
 				@rm -f $(LIB)
 				@rm -f ./a.out
-				@echo "\033[0;33mObject, program and library cleaned\033[0m!"
+				@echo "\033[0;33mObject, program and library cleaned\033[0m"
 
 re			:	fclean all
 
