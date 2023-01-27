@@ -3,14 +3,12 @@ section .text
 	global _loop
 
 ft_strlen:
-	mov rsi, rdi
-	cmp byte [rsi + rbx], 0
-	jne _loop
-	mov rax, rbx
-	ret
-
+	cmp byte [rdi + rbx], 0 ; cmp the rsi[rbx] rbx is the iterator to '\0'
+	jne _loop ; if not equal '\0' jump to _loop
+	mov rax, rbx ; mov rbx(i) value to rax because rax is the return value
+	mov rbx, 0 ; reset rbx(i) to zero
+	ret ; return
 
 _loop:
-	mov al, byte [rsi + rbx]
-	inc rbx
-	jmp ft_strlen
+	inc rbx ; incremente rbx(i + 1)
+	jmp ft_strlen ; jump to ft_strlen
