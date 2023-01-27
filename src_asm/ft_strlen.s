@@ -1,21 +1,16 @@
-; section .data
-; 	text db "Hello, World", 10
-
-; section .text
-; 	global start
-; _start:
-; 	mov rax, 1
-; 	mov rdi, 1
-; 	mov rsi, text
-; 	mov rdx, 14
-; 	syscall
-
-; 	mov rax, 60
-; 	mov rdi, 0
-; 	syscall
-
-section .data
+section .text
 	global ft_strlen
+	global _loop
 
 ft_strlen:
-	
+	mov rsi, rdi
+	cmp byte [rsi + rbx], 0
+	jne _loop
+	mov rax, rbx
+	ret
+
+
+_loop:
+	mov al, byte [rsi + rbx]
+	inc rbx
+	jmp ft_strlen
