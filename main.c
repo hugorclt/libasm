@@ -30,20 +30,11 @@ int main(void)
 		ft_write(-1, "cc\n", 3);
 		write(-1, "cc\n", 3);
 	}
-	// {
-	// 	printf("---------ft_strlen_test----------")
-	// 	printf("\t---------Test#1----------")
-	// 	printf("\tft_strlen(\"Hello, World!\")", ft_strlen("Hello, World!"));
-	// 	printf("\tstrlen(\"Hello, World!\")", strlen("Hello, World!"));
-	// 	printf("\t---------Test#2----------")
-	// 	printf("ft_strlen(\"ceci est un gros test avec des caracteres speciaux et tout ca genre &^#(!#*$))*!$)\")", ft_strlen("ceci est un gros test avec des caracteres speciaux et tout ca genre &^#(!#*$))*!$)"));
-	// 	printf("strlen(\"ceci est un gros test avec des caracteres speciaux et tout ca genre &^#(!#*$))*!$)\")", strlen("ceci est un gros test avec des caracteres speciaux et tout ca genre &^#(!#*$))*!$)"));
-	// 	printf("\t---------Test#4----------")
-	// 	printf("\tft_strlen(\"\")", ft_strlen(""));
-	// 	printf("\tstrlen(\"\")", strlen(""));
-	// 	printf("\t---------Test#5----------")
-	// 	printf("\tft_strlen(\"1\")", ft_strlen("1"));
-	// 	printf("\tstrlen(\"1\")", strlen("1"));
+	{
+		char	src[10];
+		char	dest[5] = { "hello" };
 
-	// }
+		ft_strcpy(src, dest);
+		printf("%s\n", src);
+	}
 }

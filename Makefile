@@ -5,18 +5,18 @@ LIB 		= 	libasm.a
 SRC_DIR		=	src_asm
 
 FILES 		= 	ft_write.s\
-				ft_strlen.s
-				
-				#ft_strcpy.s\
+				ft_strlen.s\
+				ft_read.s\
+				ft_strcpy.s
+
 				#ft_strdup.s\
 				#ft_strcmp.s\
-				#ft_write.s\
 
 SRCS 		= 	$(addprefix $(SRC_DIR)/, $(FILES))
 
-INCL		=	libasm.h\
+INCL		=	libasm.h
 
-CFILES 		= 	main.c\
+CFILES 		= 	main.c
 
 CC 			= 	gcc
 

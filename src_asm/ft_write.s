@@ -1,6 +1,5 @@
-section .text
-	global ft_write
-	global _handle_error
+global ft_write
+extern __errno_location
 
 ; ft_write(fd == rdi, str = rsi, len = rdx)
 ft_write:

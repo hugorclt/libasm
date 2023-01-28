@@ -1,6 +1,5 @@
-section .text
-	global ft_read
-	global _handle_error
+global ft_read
+extern __errno_location
 
 ; ft_read(fd == rdi, buf = rsi, len = rdx)
 ft_read:
