@@ -3,9 +3,9 @@ section .text
 
 ; ft_strcpy(dest == rdi, src = rsi)
 ft_strcpy:
-	cmp byte [esi], 0 
+	cmp byte [rsi], 0 
 	jne _loop
-	mov byte [esi], 0
+	mov byte [rdi], 0
 	mov rax, rdi
 	mov rbx, 0
 	ret
