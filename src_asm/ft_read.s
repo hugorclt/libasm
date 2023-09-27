@@ -1,18 +1,7 @@
-global ft_read
-extern __errno_location
+global ft_write
 
-; ft_read(fd == rdi, buf = rsi, len = rdx)
-ft_read:
-	mov rax, 0 ; mov read syscall to rax register
-	syscall ; execute syscall contained in rax
-	cmp rax, 0 ; cmp return of function with 0
-	jl _handle_error ; jump to handle error if rax is lower than zero
-	ret ; return value of rax
-
-_handle_error: ; same than ft_write handling
-	neg rax
-	mov rdi, rax
-	call __errno_location
-	mov [rax], rdi
-	mov rax, -1
+;	sys_read: rax	(unsigned int fd : rdi,	const char *buf: rsi,	size_t count: rdx)
+ft_write:
+	mov rax, 0          ; 0 is syscall value for read
+	syscall
 	ret

@@ -1,19 +1,23 @@
-section .text
-	global ft_strcpy
+global ft_strcpy
 
-; ft_strcpy(dest == rdi, src = rsi)
+; ft_strlen(dest == rdi, src == rsi)
 ft_strcpy:
-	cmp byte [rsi], 0 
-	jne _loop
-	mov byte [rdi], 0
-	mov rax, rdi
-	mov rbx, 0
-	ret
-
-
+    push rbx
+    sub rbx, rbx
+    jmp _loop
+    mov al, 0
+    mov [rdi + rbx], 0
+    mov rax, rdi
+    pop rbx
+    ret
+    
 _loop:
-	mov al, [rsi]
-	mov [rdi], al
-	inc rsi
-	inc rdi
-	jmp ft_strcpy
+    cmp BYTE [rsi + rbx], 0
+    jne _incrementation
+    
+
+_incrementation:
+    mov al, [rsi + rbx]
+    mov [rdi + rbx], al
+    inc rbx
+    jmp _loop

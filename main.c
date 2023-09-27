@@ -5,8 +5,8 @@ int main(void)
 	{
 		printf("---------strlentest----------\n");
 		printf("---------Test#1----------\n");
-		printf("ft_strlen(\"Hello, World!\") = %ld\n", ft_strlen("Hello, World!"));
-		printf("strlen(\"Hello, World!\") = %ld\n", strlen("Hello, World!"));
+		printf("ft_strlen(\"Hello, World!\") = %ld\n", ft_strlen("Hello, World!\0"));
+		printf("strlen(\"Hello, World!\") = %ld\n", strlen("Hello, World!\0"));
 		printf("---------Test#2----------\n");
 		printf("ft_strlen(\"ceci est un gros test avec des caracteres speciaux et tout ca genre &^#(!#*$))*!$)\") = %ld\n", ft_strlen("ceci est un gros test avec des caracteres speciaux et tout ca genre &^#(!#*$))*!$)"));
 		printf("strlen(\"ceci est un gros test avec des caracteres speciaux et tout ca genre &^#(!#*$))*!$)\") = %ld\n", strlen("ceci est un gros test avec des caracteres speciaux et tout ca genre &^#(!#*$))*!$)"));
