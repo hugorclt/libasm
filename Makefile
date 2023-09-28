@@ -8,8 +8,8 @@ FILES 		= 	ft_write.s\
 				ft_read.s\
 				ft_strlen.s\
 				ft_strcpy.s\
-				#ft_strdup.s\
-				ft_strcmp.s
+				ft_strcmp.s\
+				ft_strdup.s
 
 SRCS 		= 	$(addprefix $(SRC_DIR)/, $(FILES))
 

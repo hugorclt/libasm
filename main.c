@@ -31,10 +31,34 @@ int main(void)
 		write(-1, "cc\n", 3);
 	}
 	{
-		char	src[10];
-		char	dest[5] = { "hello" };
+		char str1[] = "HELLO";
+		char str2[] = "HOLLA";
 
-		ft_strcpy(src, dest);
-		printf("%s\n", src);
+		printf("%s\n", str1);   // displaying what str1 is before ft_strcpy is used on it
+		ft_strcpy(str1, str2);  // calling out functtion ft_strcpy on the strings
+		printf("%s\n", str1);  // str1 should now become str2
+	}
+
+	{
+		{
+			char str1[] = "HELLO";
+			char str2[] = "HOLLA";
+			if (strcmp(str1,str2))
+				printf("Not Equal\n");
+			else
+				printf("Equal\n");
+		}
+
+		{
+			char str1[] = "HELLO";
+			char str2[] = "HELLO";
+			if (strcmp(str1,str2))
+				printf("Not Equal\n");
+			else
+				printf("Equal\n");
+		}
+	}
+	{
+		printf("%s\n", ft_strdup("yesiamastring"));
 	}
 }
