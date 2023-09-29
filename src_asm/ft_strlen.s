@@ -16,5 +16,3 @@ _loop:
 _incrementation:
     inc rbx ; increm rbx --> i + 1
     jmp  _loop
-
-
