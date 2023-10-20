@@ -13,14 +13,6 @@ FILES 		= 	ft_write.s\
 
 SRCS 		= 	$(addprefix $(SRC_DIR)/, $(FILES))
 
-INCL		=	libasm.h
-
-CFILES 		= 	main.c
-
-CC 			= 	gcc
-
-CFLAGS 		= 	-Wall -Wextra -Werror
-
 NASM 		= 	nasm 
 
 ASMFLAGS	=	-f elf64
@@ -40,8 +32,7 @@ $(NAME)		: 	$(OBJ)
 				@echo "\033[0;33mDone!\033[0m"
 
 test 		: 	
-		      	@$(CC) $(CFLAGS) main.c $(LIB)
-				@echo "\033[0;33mDone!\033[0m"
+				make -C ./tester
 
 clean		:
 				@rm -f main.o

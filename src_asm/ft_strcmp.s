@@ -21,4 +21,5 @@ _ret:
     movzx rax, byte [rsi + rbx] ;;movzx permit to move value from value from little regiter here 8bits to another register with more size here rax 64bits
     movzx rdx, byte [rdi, rbx] ;; typically it fill the rest of the register with 0
     sub rax, rdx
+    pop rbx
     ret
